@@ -140,7 +140,7 @@ export default defineComponent({
   setup(props) {
     const modelValue = useVModel(props, 'modelValue')
     const scrollColumns = ref<ScrollColumn[]>([])
-    const visibleColumnsNum = ref<number>(props.columns.length)
+    const visibleColumnsNum = ref<number>(Infinity)
     const optionHeight = computed(() => toPxNum(props.optionHeight))
     const optionCount = computed(() => toPxNum(props.optionCount))
     const center = computed(() => (optionCount.value * optionHeight.value) / 2 - optionHeight.value / 2)
@@ -153,11 +153,7 @@ export default defineComponent({
     watch(
       () => props.columnsNum,
       (newVal) => {
-        if (props.cascade) {
-          visibleColumnsNum.value = +(newVal || Infinity)
-          return
-        }
-        visibleColumnsNum.value = +(newVal || props.columns.length)
+        visibleColumnsNum.value = +(newVal || Infinity)
       },
       { immediate: true }
     )
