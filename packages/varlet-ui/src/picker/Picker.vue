@@ -174,7 +174,8 @@ export default defineComponent({
     }
 
     function normalizeNormalMode(columns: PickerColumnOption[][]) {
-      return columns.map((column, idx) => {
+      const visibleColumns = columns.slice(0, +(props.columnsNum || columns.length))
+      return visibleColumns.map((column, idx) => {
         const scrollColumn: ScrollColumn = {
           id: sid++,
           prevY: 0,

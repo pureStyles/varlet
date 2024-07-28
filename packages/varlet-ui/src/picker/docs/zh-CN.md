@@ -466,6 +466,7 @@ function handleChange(values, indexes) {
 | `cascade`                | 是否开启级联模式 | _boolean_ | `true` |
 | `optionHeight`           | 选项的高度 | _string \| number_ | `44` |
 | `optionCount`            | 可见的选项个数 | _string \| number_ | `6` |
+| `columnsNum`             | 显示列数 | _string \| number_ | columns长度 |
 | `confirmButtonText`      | 确认按钮文字 | _string_ | `确认` |
 | `cancelButtonText`       | 取消按钮文字 | _string_ | `取消` |
 | `confirmButtonTextColor` | 确认按钮文字颜色 | _string_ | `-` |

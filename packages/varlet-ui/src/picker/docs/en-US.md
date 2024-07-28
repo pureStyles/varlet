@@ -466,6 +466,7 @@ function handleChange(values, indexes) {
 | `cascade`                | Whether to enable cascade mode | _boolean_ | `true` |
 | `optionHeight`           | The height of the option | _string \| number_ | `44` |
 | `optionCount`            | Number of visible options | _string \| number_ | `6` |
+| `columnsNum`             | Number of visible columns | _string \| number_ | length of prop `columns` |
 | `confirmButtonText`      | Confirm button text | _string_ | `Confirm` |
 | `cancelButtonText`       | Cancel button text | _string_ | `Cancel` |
 | `confirmButtonTextColor` | Confirm button text color | _string_ | `-` |
